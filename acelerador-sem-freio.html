@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acelerador Sem Freio - Organizador de Rotinas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    .page-header { margin-bottom: 30px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: #00f0ff; text-decoration: none; font-weight: 700; margin-bottom: 20px; transition: color 0.3s; }
+    .back-btn:hover { color: #ff0055; }
+    .content-article { background: rgba(18, 18, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .section-title { font-size: 1.5rem; color: #00f0ff; margin: 30px 0 15px 0; border-bottom: 1px solid rgba(0, 240, 255, 0.2); padding-bottom: 8px; }
+    .text-block { color: #c0c0d5; line-height: 1.8; font-size: 1rem; margin-bottom: 20px; }
+    .feature-box { background: rgba(255, 0, 85, 0.08); border-left: 4px solid #ff0055; padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .feature-box h4 { color: #ffffff; font-size: 1.1rem; margin-bottom: 10px; }
+    .illustration-container { text-align: center; margin: 30px 0; padding: 20px; background: rgba(10, 10, 15, 0.6); border-radius: 12px; border: 1px solid rgba(0, 240, 255, 0.15); }
+    .illustration-svg { max-width: 100%; height: auto; }
+    ul.custom-list { list-style: none; padding-left: 0; }
+    ul.custom-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #c0c0d5; line-height: 1.6; }
+    ul.custom-list li::before { content: '🧠'; position: absolute; left: 0; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg3d"></canvas>
+
+  <div class="container">
+    <header class="page-header">
+      <a href="index.html" class="back-btn">&larr; Voltar ao Painel Principal</a>
+      <span class="card-tag">Saúde Mental</span>
+      <h1 class="main-title" style="text-align: left;">Efeito "Acelerador Sem Freio"</h1>
+      <p class="subtitle" style="text-align: left;">Eliminando a culpa constante e construindo descanso de alta qualidade</p>
+    </header>
+
+    <main class="content-article">
+      <h2 class="section-title">1. O Conflito Papel x Presença</h2>
+      <p class="text-block">
+        Muitos estudantes e profissionais sofrem com uma dissonância cognitiva crônica: ao trabalhar, sentem ansiedade por não estarem estudando; ao estudar, preocupam-se com as pendências da empresa; e ao tentar descansar, sentem culpa por não estarem produzindo. Isso cria um estado contínuo de hipervigilância, onde o cérebro nunca atinge o repouso verdadeiro.
+      </p>
+
+      <div class="illustration-container">
+        <!-- SVG Ilustrativo: Balança de Foco Mental -->
+        <svg class="illustration-svg" width="380" height="150" viewBox="0 0 380 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="75" r="45" stroke="#ff0055" stroke-width="3" fill="none"/>
+          <text x="100" y="70" fill="#ff0055" font-size="12" font-weight="bold" text-anchor="middle" font-family="Montserrat">TRABALHO</text>
+          <text x="100" y="85" fill="#a0a0b8" font-size="9" text-anchor="middle" font-family="Montserrat">(Pensando no estudo)</text>
+
+          <path d="M160 75 L220 75" stroke="#6f00ff" stroke-width="2" stroke-dasharray="4 4"/>
+
+          <circle cx="280" cy="75" r="45" stroke="#00f0ff" stroke-width="3" fill="none"/>
+          <text x="280" y="70" fill="#00f0ff" font-size="12" font-weight="bold" text-anchor="middle" font-family="Montserrat">ESTUDO</text>
+          <text x="280" y="85" fill="#a0a0b8" font-size="9" text-anchor="middle" font-family="Montserrat">(Pensando no trabalho)</text>
+        </svg>
+      </div>
+
+      <h2 class="section-title">2. Estratégias de Separação de Compartimentos</h2>
+
+      <div class="feature-box">
+        <h4>O Ritual Físico de Encerramento (Shutdown Protocol)</h4>
+        <p class="text-block" style="margin-bottom:0;">
+          Ao término do dia produtivo, realize uma ação física deliberada para sinalizar o fim dos compromissos: feche todas as abas do computador, guarde o caneta/caderno e diga em voz alta: <em>"Jornada concluída por hoje"</em>. Essa ancoragem comportamental interrompe a ruminação mental durante a noite.
+        </p>
+      </div>
+
+      <ul class="custom-list">
+        <li><strong>Descanso Agendado Obrigatório:</strong> O descanso não é o que sobra do dia; é um compromisso agendado. Reserve blocos intocáveis na agenda para lazer, exercícios físicos e convívio sem culpas.</li>
+        <li><strong>Compartimentação Estrita:</strong> Quando estiver no horário de trabalho, concentre-se unicamente nele. Quando for o horário do estudo, dedique-se a ele. Entenda que tentar resolver ambos ao mesmo tempo prejudica a qualidade de ambos.</li>
+        <li><strong>Diário de Conquistas Diárias:</strong> Ao final do dia, registre 3 coisas que você concluiu com sucesso. Isso reforça a percepção do progresso e neutraliza a sensação ilusória de insuficiência.</li>
+      </ul>
+    </main>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('bg3d');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resize); resize();
+    let mouse = { x: width / 2, y: height / 2 };
+    window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({ x: Math.random() * width, y: Math.random() * height, z: Math.random() * width, size: Math.random() * 2 + 1, color: Math.random() > 0.5 ? '#ff0055' : '#00f0ff' });
+    }
+    function render3D() {
+      ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = 'rgba(111, 0, 255, 0.08)'; ctx.lineWidth = 1;
+      const step = 60, offsetX = (mouse.x - width / 2) * 0.05, offsetY = (mouse.y - height / 2) * 0.05;
+      for (let x = -step; x < width + step; x += step) { ctx.beginPath(); ctx.moveTo(x + offsetX, 0); ctx.lineTo(x - offsetX, height); ctx.stroke(); }
+      for (let y = -step; y < height + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y + offsetY); ctx.lineTo(width, y - offsetY); ctx.stroke(); }
+      particles.forEach(p => {
+        p.z -= 1.5; if (p.z <= 0) p.z = width;
+        const k = 300 / p.z;
+        const px = (p.x - width / 2) * k + width / 2 + (mouse.x - width / 2) * 0.02;
+        const py = (p.y - height / 2) * k + height / 2 + (mouse.y - height / 2) * 0.02;
+        ctx.beginPath(); ctx.arc(px, py, Math.max(0.1, p.size * k), 0, Math.PI * 2);
+        ctx.fillStyle = p.color; ctx.shadowBlur = 10; ctx.shadowColor = p.color; ctx.fill(); ctx.shadowBlur = 0;
+      });
+      requestAnimationFrame(render3D);
+    }
+    render3D();
+  </script>
+</body>
+</html>

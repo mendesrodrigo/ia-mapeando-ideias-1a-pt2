@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paralisia por Sobrecarga - Organizador de Rotinas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    .page-header { margin-bottom: 30px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: #00f0ff; text-decoration: none; font-weight: 700; margin-bottom: 20px; transition: color 0.3s; }
+    .back-btn:hover { color: #ff0055; }
+    .content-article { background: rgba(18, 18, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .section-title { font-size: 1.5rem; color: #00f0ff; margin: 30px 0 15px 0; border-bottom: 1px solid rgba(0, 240, 255, 0.2); padding-bottom: 8px; }
+    .text-block { color: #c0c0d5; line-height: 1.8; font-size: 1rem; margin-bottom: 20px; }
+    .feature-box { background: rgba(0, 240, 255, 0.08); border-left: 4px solid #00f0ff; padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .feature-box h4 { color: #ffffff; font-size: 1.1rem; margin-bottom: 10px; }
+    .illustration-container { text-align: center; margin: 30px 0; padding: 20px; background: rgba(10, 10, 15, 0.6); border-radius: 12px; border: 1px solid rgba(255, 0, 85, 0.15); }
+    .illustration-svg { max-width: 100%; height: auto; }
+    ul.custom-list { list-style: none; padding-left: 0; }
+    ul.custom-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #c0c0d5; line-height: 1.6; }
+    ul.custom-list li::before { content: '🌀'; position: absolute; left: 0; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg3d"></canvas>
+
+  <div class="container">
+    <header class="page-header">
+      <a href="index.html" class="back-btn">&larr; Voltar ao Painel Principal</a>
+      <span class="card-tag">Planejamento</span>
+      <h1 class="main-title" style="text-align: left;">Paralisia por Sobrecarga de Tarefas</h1>
+      <p class="subtitle" style="text-align: left;">Dominando a matriz de priorização e eliminando a sensação de sufoco</p>
+    </header>
+
+    <main class="content-article">
+      <h2 class="section-title">1. Entendendo o Bloqueio por Análise (Analysis Paralysis)</h2>
+      <p class="text-block">
+        Quando a quantidade de pendências acumuladas excede a capacidade de processamento da memória de trabalho, o cérebro interpreta o cenário como uma ameaça contínua. Diante de 20 itens urgentes na lista, a resposta biológica é congelar (procrastinar passivamente em redes sociais) em vez de escolher um item para iniciar.
+      </p>
+
+      <div class="illustration-container">
+        <!-- SVG Ilustrativo: Matriz de Eisenhower -->
+        <svg class="illustration-svg" width="380" height="220" viewBox="0 0 380 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" width="160" height="85" rx="8" stroke="#ff0055" stroke-width="2" fill="rgba(255,0,85,0.05)"/>
+          <text x="100" y="55" fill="#ff0055" font-size="12" font-weight="bold" text-anchor="middle" font-family="Montserrat">1. FAÇA AGORA</text>
+          <text x="100" y="75" fill="#a0a0b8" font-size="10" text-anchor="middle" font-family="Montserrat">Urgente & Importante</text>
+
+          <rect x="200" y="20" width="160" height="85" rx="8" stroke="#00f0ff" stroke-width="2" fill="rgba(0,240,255,0.05)"/>
+          <text x="280" y="55" fill="#00f0ff" font-size="12" font-weight="bold" text-anchor="middle" font-family="Montserrat">2. AGENDE</text>
+          <text x="280" y="75" fill="#a0a0b8" font-size="10" text-anchor="middle" font-family="Montserrat">Não Urgente & Importante</text>
+
+          <rect x="20" y="115" width="160" height="85" rx="8" stroke="#6f00ff" stroke-width="2" fill="rgba(111,0,255,0.05)"/>
+          <text x="100" y="150" fill="#6f00ff" font-size="12" font-weight="bold" text-anchor="middle" font-family="Montserrat">3. DELEGUE / REDUZA</text>
+          <text x="100" y="170" fill="#a0a0b8" font-size="10" text-anchor="middle" font-family="Montserrat">Urgente & Não Importante</text>
+
+          <rect x="200" y="115" width="160" height="85" rx="8" stroke="#555" stroke-width="2" fill="rgba(255,255,255,0.02)"/>
+          <text x="280" y="150" fill="#888" font-size="12" font-weight="bold" text-anchor="middle" font-family="Montserrat">4. ELIMINE</text>
+          <text x="280" y="170" fill="#a0a0b8" font-size="10" text-anchor="middle" font-family="Montserrat">Não Urgente & Não Importante</text>
+        </svg>
+      </div>
+
+      <h2 class="section-title">2. Estrutura de Destravamento Diário</h2>
+
+      <div class="feature-box">
+        <h4>O Despejo Mental Noturno (Brain Dump)</h4>
+        <p class="text-block" style="margin-bottom:0;">
+          Nunca vá dormir com as pendências apenas na cabeça. Antes de encerrar o dia, escreva absolutamente tudo em um papel ou bloco de notas digital sem se preocupar com ordem. Transferir os dados para um suporte físico alivia instantaneamente a ansiedade do córtex visual.
+        </p>
+      </div>
+
+      <ul class="custom-list">
+        <li><strong>A Regra Sagrada das 3 Vitórias:</strong> Selecione apenas 3 tarefas fundamentais para o dia seguinte (exemplo: finalizar o relatório do trabalho, revisar 1 capítulo de matéria, fazer 20 exercícios). O resto é bônus.</li>
+        <li><strong>Micro-Tarefas Atomicamente Pequenas:</strong> Se "Estudar Cálculo" causa paralisia, transforme em "Abrir a página 42 do livro de Cálculo e ler o primeiro parágrafo". A redução da barreira de entrada elimina a resposta de esquiva.</li>
+        <li><strong>Timeboxing Estrito:</strong> Defina horários de início e término exatos para cada bloco. Saber que a tarefa tem hora para acabar impede o desgaste sem fim.</li>
+      </ul>
+    </main>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('bg3d');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resize); resize();
+    let mouse = { x: width / 2, y: height / 2 };
+    window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({ x: Math.random() * width, y: Math.random() * height, z: Math.random() * width, size: Math.random() * 2 + 1, color: Math.random() > 0.5 ? '#ff0055' : '#00f0ff' });
+    }
+    function render3D() {
+      ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = 'rgba(111, 0, 255, 0.08)'; ctx.lineWidth = 1;
+      const step = 60, offsetX = (mouse.x - width / 2) * 0.05, offsetY = (mouse.y - height / 2) * 0.05;
+      for (let x = -step; x < width + step; x += step) { ctx.beginPath(); ctx.moveTo(x + offsetX, 0); ctx.lineTo(x - offsetX, height); ctx.stroke(); }
+      for (let y = -step; y < height + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y + offsetY); ctx.lineTo(width, y - offsetY); ctx.stroke(); }
+      particles.forEach(p => {
+        p.z -= 1.5; if (p.z <= 0) p.z = width;
+        const k = 300 / p.z;
+        const px = (p.x - width / 2) * k + width / 2 + (mouse.x - width / 2) * 0.02;
+        const py = (p.y - height / 2) * k + height / 2 + (mouse.y - height / 2) * 0.02;
+        ctx.beginPath(); ctx.arc(px, py, Math.max(0.1, p.size * k), 0, Math.PI * 2);
+        ctx.fillStyle = p.color; ctx.shadowBlur = 10; ctx.shadowColor = p.color; ctx.fill(); ctx.shadowBlur = 0;
+      });
+      requestAnimationFrame(render3D);
+    }
+    render3D();
+  </script>
+</body>
+</html>

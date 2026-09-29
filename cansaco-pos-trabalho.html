@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cansaço Pós-Trabalho vs Estudo - Organizador de Rotinas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    .page-header {
+      margin-bottom: 30px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #00f0ff;
+      text-decoration: none;
+      font-weight: 700;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+    .back-btn:hover {
+      color: #ff0055;
+    }
+    .content-article {
+      background: rgba(18, 18, 26, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .section-title {
+      font-size: 1.5rem;
+      color: #00f0ff;
+      margin: 30px 0 15px 0;
+      border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+      padding-bottom: 8px;
+    }
+    .text-block {
+      color: #c0c0d5;
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .feature-box {
+      background: rgba(255, 0, 85, 0.08);
+      border-left: 4px solid #ff0055;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+    .feature-box h4 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .illustration-container {
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(10, 10, 15, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 240, 255, 0.15);
+    }
+    .illustration-svg {
+      max-width: 100%;
+      height: auto;
+    }
+    ul.custom-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.custom-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      color: #c0c0d5;
+      line-height: 1.6;
+    }
+    ul.custom-list li::before {
+      content: '⚡';
+      position: absolute;
+      left: 0;
+      color: #00f0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg3d"></canvas>
+
+  <div class="container">
+    <header class="page-header">
+      <a href="index.html" class="back-btn">&larr; Voltar ao Painel Principal</a>
+      <span class="card-tag">Foco & Energia</span>
+      <h1 class="main-title" style="text-align: left;">Cansaço Pós-Trabalho vs Estudo</h1>
+      <p class="subtitle" style="text-align: left;">Como superara a fadiga cognitiva e otimizar a assimilação noturna</p>
+    </header>
+
+    <main class="content-article">
+      <h2 class="section-title">1. A Análise do Fenômeno: Fadiga Decisória e Esgotamento de Glicose</h2>
+      <p class="text-block">
+        Após um dia inteiro lidando com prazos, e-mails, reuniões e tomada de decisões, o cérebro consome grande parte dos seus recursos energéticos (foco e controle inibitório operados pelo córtex pré-frontal). Chegar à noite e tentar absorver novos conceitos complexos cria um choque de desempenho: a mente busca instintivamente por atividades de baixo esforço e alta recompensa de dopamina, como redes sociais ou séries.
+      </p>
+
+      <div class="illustration-container">
+        <!-- SVG Ilustrativo: Bateria de Energia vs Foco -->
+        <svg class="illustration-svg" width="400" height="160" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="40" width="160" height="80" rx="10" stroke="#ff0055" stroke-width="4" fill="none"/>
+          <rect x="180" y="65" width="12" height="30" rx="3" fill="#ff0055"/>
+          <rect x="30" y="50" width="30" height="60" rx="5" fill="#ff0055"/>
+          <text x="100" y="145" fill="#a0a0b8" font-size="12" text-anchor="middle" font-family="Montserrat">Energia Pós-Trabalho (15%)</text>
+          
+          <path d="M220 80 L250 80 M240 70 L250 80 L240 90" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
+          
+          <rect x="270" y="40" width="110" height="80" rx="10" stroke="#00f0ff" stroke-width="4" fill="none"/>
+          <rect x="280" y="50" width="90" height="60" rx="5" fill="#00f0ff" opacity="0.8"/>
+          <text x="325" y="145" fill="#a0a0b8" font-size="12" text-anchor="middle" font-family="Montserrat">Ritmo Otimizado (80%)</text>
+        </svg>
+      </div>
+
+      <h2 class="section-title">2. Estratégias Avançadas de Restauração Neuro-Funcional</h2>
+      
+      <div class="feature-box">
+        <h4>A Zona de Despressurização (O Protocolo do Reset)</h4>
+        <p class="text-block" style="margin-bottom:0;">
+          Não vá da cadeira do trabalho direto para os cadernos ou telas de estudo. Insira um intervalo de transição obrigatório de 20 minutos. Tome um banho morno, troque de roupa e faça uma caminhada sem fones de ouvido. Isso sinaliza para o sistema nervoso autônomo o encerramento do ciclo corporativo.
+        </p>
+      </div>
+
+      <p class="text-block">
+        Para maximizar os resultados nos momentos de energia mais escassa, aplique as seguintes diretrizes:
+      </p>
+
+      <ul class="custom-list">
+        <li><strong>Inversão Estratégica (Pequena Leitura Matinal):</strong> Mova ao menos 30 a 45 minutos do estudo mais denso para o período da manhã (antes do expediente), enquanto a taxa de glicose cerebral está restaurada.</li>
+        <li><strong>Método Pomodoro Causal (25/5):</strong> Estude por 25 minutos exatos e descanse 5. No intervalo, afaste-se totalmente das telas e feche os olhos.</li>
+        <li><strong>Estudo Ativo sobre Passivo:</strong> Esqueça leituras passivas longas quando estiver cansado. Priorize resolução de questões, montagem de mapas mentais ou flashcards (Anki/Notion).</li>
+      </ul>
+
+      <h2 class="section-title">3. Tabela de Ajuste de Turno e Esforço</h2>
+      <p class="text-block">
+        Adeque o tipo de conteúdo com o seu nível real de disposição fisiológica ao longo do dia:
+      </p>
+
+      <div style="overflow-x:auto;">
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; color: #c0c0d5;">
+          <thead>
+            <tr style="border-bottom: 2px solid #00f0ff; text-align: left;">
+              <th style="padding: 12px; color: #00f0ff;">Horário / Momento</th>
+              <th style="padding: 12px; color: #00f0ff;">Nível de Nível Cognitivo</th>
+              <th style="padding: 12px; color: #00f0ff;">Atividade Recomendada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px;">Manhã (Antes do Trabalho)</td>
+              <td style="padding: 12px; color: #00ffaa;">Alto / Restaurado</td>
+              <td style="padding: 12px;">Matérias difíceis, lógica, programação, teoremas.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px;">Noite (Pós-Trabalho)</td>
+              <td style="padding: 12px; color: #ff0055;">Baixo / Moderado</td>
+              <td style="padding: 12px;">Resolução de exercícios, revisões curtas, videoaulas.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Animação 3D do background
+    const canvas = document.getElementById('bg3d');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resize); resize();
+    let mouse = { x: width / 2, y: height / 2 };
+    window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({ x: Math.random() * width, y: Math.random() * height, z: Math.random() * width, size: Math.random() * 2 + 1, color: Math.random() > 0.5 ? '#ff0055' : '#00f0ff' });
+    }
+    function render3D() {
+      ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = 'rgba(111, 0, 255, 0.08)'; ctx.lineWidth = 1;
+      const step = 60, offsetX = (mouse.x - width / 2) * 0.05, offsetY = (mouse.y - height / 2) * 0.05;
+      for (let x = -step; x < width + step; x += step) { ctx.beginPath(); ctx.moveTo(x + offsetX, 0); ctx.lineTo(x - offsetX, height); ctx.stroke(); }
+      for (let y = -step; y < height + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y + offsetY); ctx.lineTo(width, y - offsetY); ctx.stroke(); }
+      particles.forEach(p => {
+        p.z -= 1.5; if (p.z <= 0) p.z = width;
+        const k = 300 / p.z;
+        const px = (p.x - width / 2) * k + width / 2 + (mouse.x - width / 2) * 0.02;
+        const py = (p.y - height / 2) * k + height / 2 + (mouse.y - height / 2) * 0.02;
+        ctx.beginPath(); ctx.arc(px, py, Math.max(0.1, p.size * k), 0, Math.PI * 2);
+        ctx.fillStyle = p.color; ctx.shadowBlur = 10; ctx.shadowColor = p.color; ctx.fill(); ctx.shadowBlur = 0;
+      });
+      requestAnimationFrame(render3D);
+    }
+    render3D();
+  </script>
+</body>
+</html>

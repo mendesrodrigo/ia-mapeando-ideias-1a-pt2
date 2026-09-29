@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procrastinação de Conteúdos Difíceis - Organizador de Rotinas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    .page-header { margin-bottom: 30px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: #00f0ff; text-decoration: none; font-weight: 700; margin-bottom: 20px; transition: color 0.3s; }
+    .back-btn:hover { color: #ff0055; }
+    .content-article { background: rgba(18, 18, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .section-title { font-size: 1.5rem; color: #00f0ff; margin: 30px 0 15px 0; border-bottom: 1px solid rgba(0, 240, 255, 0.2); padding-bottom: 8px; }
+    .text-block { color: #c0c0d5; line-height: 1.8; font-size: 1rem; margin-bottom: 20px; }
+    .feature-box { background: rgba(111, 0, 255, 0.12); border-left: 4px solid #6f00ff; padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .feature-box h4 { color: #ffffff; font-size: 1.1rem; margin-bottom: 10px; }
+    .illustration-container { text-align: center; margin: 30px 0; padding: 20px; background: rgba(10, 10, 15, 0.6); border-radius: 12px; border: 1px solid rgba(111, 0, 255, 0.2); }
+    .illustration-svg { max-width: 100%; height: auto; }
+    ul.custom-list { list-style: none; padding-left: 0; }
+    ul.custom-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #c0c0d5; line-height: 1.6; }
+    ul.custom-list li::before { content: '⏳'; position: absolute; left: 0; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg3d"></canvas>
+
+  <div class="container">
+    <header class="page-header">
+      <a href="index.html" class="back-btn">&larr; Voltar ao Painel Principal</a>
+      <span class="card-tag">Hábitos</span>
+      <h1 class="main-title" style="text-align: left;">Procrastinação de Conteúdos Difíceis</h1>
+      <p class="subtitle" style="text-align: left;">Superando o desconforto emocional da complexidade técnica</p>
+    </header>
+
+    <main class="content-article">
+      <h2 class="section-title">1. A Procrastinação como Regulação Emocional</h2>
+      <p class="text-block">
+        Adiar uma matéria complexa ou um projeto exigente não é preguiça ou má gestão de tempo; é uma estratégia inconsciente de evitação de desconforto emocional. Quando encaramos um assunto difícil, sentimos medo da incompetência, da falha ou do tédio. Para nos proteger desse sentimento, o cérebro busca uma tarefa fácil e gratificante.
+      </p>
+
+      <div class="illustration-container">
+        <!-- SVG Ilustrativo: Quebrando o Bloco de Tarefa -->
+        <svg class="illustration-svg" width="380" height="150" viewBox="0 0 380 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Monolito Intimidador -->
+          <rect x="30" y="30" width="100" height="90" rx="8" fill="rgba(255,0,85,0.2)" stroke="#ff0055" stroke-width="2"/>
+          <text x="80" y="80" fill="#ff0055" font-size="11" font-weight="bold" text-anchor="middle" font-family="Montserrat">Projeto Monolítico</text>
+          
+          <path d="M150 75 L180 75 M170 65 L180 75 L170 85" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
+
+          <!-- Micro Etapas -->
+          <rect x="210" y="30" width="140" height="24" rx="4" fill="rgba(0,240,255,0.1)" stroke="#00f0ff" stroke-width="1.5"/>
+          <text x="280" y="46" fill="#00f0ff" font-size="10" text-anchor="middle" font-family="Montserrat">Passo 1: Ler 2 Páginas</text>
+
+          <rect x="210" y="63" width="140" height="24" rx="4" fill="rgba(0,240,255,0.1)" stroke="#00f0ff" stroke-width="1.5"/>
+          <text x="280" y="79" fill="#00f0ff" font-size="10" text-anchor="middle" font-family="Montserrat">Passo 2: Fazer 1 Resumo</text>
+
+          <rect x="210" y="96" width="140" height="24" rx="4" fill="rgba(0,240,255,0.1)" stroke="#00f0ff" stroke-width="1.5"/>
+          <text x="280" y="112" fill="#00f0ff" font-size="10" text-anchor="middle" font-family="Montserrat">Passo 3: Resolver 2 Exercícios</text>
+        </svg>
+      </div>
+
+      <h2 class="section-title">2. Técnicas de Ação Imediata</h2>
+
+      <div class="feature-box">
+        <h4>A Regra dos 5 Minutos (O Acordo do Micro-Compromisso)</h4>
+        <p class="text-block" style="margin-bottom:0;">
+          Diga a si mesmo que você irá trabalhar na tarefa mais difícil por exatos 5 minutos. Se ao final desse período você ainda desejar parar, estará autorizado a interromper. Na esmagadora maioria dos casos, romper a inércia inicial é a parte mais dura; após engajar, a inibição desaparece.
+        </p>
+      </div>
+
+      <ul class="custom-list">
+        <li><strong>A Técnica "Eat That Frog" (Coma o Sapo Primeiro):</strong> Agende o assunto mais espinhoso para ser o primeiro item do seu bloco produtivo do dia. Concluir a tarefa mais difícil logo cedo libera uma onda de dopamina que sustenta o restante da jornada.</li>
+        <li><strong>Feynman Technique para Simplificação:</strong> Ao tentar aprender algo muito denso, tente explicar o conceito em voz alta com palavras simples, como se estivesse ensinando para uma criança de 10 anos. Isso expõe lacunas reais de entendimento.</li>
+        <li><strong>Remoção do Julgamento de Perfeição:</strong> Permita-se criar um "primeiro rascunho ruim". É infinitamente mais fácil editar ou melhorar um trabalho incompleto do que encarar uma página em branco.</li>
+      </ul>
+    </main>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('bg3d');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resize); resize();
+    let mouse = { x: width / 2, y: height / 2 };
+    window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({ x: Math.random() * width, y: Math.random() * height, z: Math.random() * width, size: Math.random() * 2 + 1, color: Math.random() > 0.5 ? '#ff0055' : '#00f0ff' });
+    }
+    function render3D() {
+      ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = 'rgba(111, 0, 255, 0.08)'; ctx.lineWidth = 1;
+      const step = 60, offsetX = (mouse.x - width / 2) * 0.05, offsetY = (mouse.y - height / 2) * 0.05;
+      for (let x = -step; x < width + step; x += step) { ctx.beginPath(); ctx.moveTo(x + offsetX, 0); ctx.lineTo(x - offsetX, height); ctx.stroke(); }
+      for (let y = -step; y < height + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y + offsetY); ctx.lineTo(width, y - offsetY); ctx.stroke(); }
+      particles.forEach(p => {
+        p.z -= 1.5; if (p.z <= 0) p.z = width;
+        const k = 300 / p.z;
+        const px = (p.x - width / 2) * k + width / 2 + (mouse.x - width / 2) * 0.02;
+        const py = (p.y - height / 2) * k + height / 2 + (mouse.y - height / 2) * 0.02;
+        ctx.beginPath(); ctx.arc(px, py, Math.max(0.1, p.size * k), 0, Math.PI * 2);
+        ctx.fillStyle = p.color; ctx.shadowBlur = 10; ctx.shadowColor = p.color; ctx.fill(); ctx.shadowBlur = 0;
+      });
+      requestAnimationFrame(render3D);
+    }
+    render3D();
+  </script>
+</body>
+</html>

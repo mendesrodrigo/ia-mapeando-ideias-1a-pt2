@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizador de Rotinas - Rodrigo Mendes</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte Google Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Canvas para o fundo 3D dinâmico -->
+  <canvas id="bg3d"></canvas>
+
+  <div class="container">
+    <header class="header">
+      <h1 class="main-title">Organizador de Rotinas de Estudos e Trabalho do Rodrigo Mendes</h1>
+      <p class="subtitle">Mapeamento de desafios, dores cotidianas e estratégias práticas de superação</p>
+    </header>
+
+    <main class="grid-cards">
+      
+      <!-- Card 1 -->
+      <article class="card" onclick="window.location.href='cansaco-pos-trabalho.html'">
+        <div class="card-icon">⚡</div>
+        <span class="card-tag">Foco & Energia</span>
+        <h2 class="card-title">Cansaço Pós-Trabalho vs Estudo</h2>
+        <p class="card-desc">Chegar do trabalho exausto e não conseguir render nos estudos à noite.</p>
+        <button class="card-btn">Ver Diagnóstico & Solução &rarr;</button>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" onclick="window.location.href='paralisia-sobrecarga.html'">
+        <div class="card-icon">🌀</div>
+        <span class="card-tag">Planejamento</span>
+        <h2 class="card-title">Paralisia por Sobrecarga</h2>
+        <p class="card-desc">Sensação diária de ter tantas tarefas pendentes que você não sabe por onde começar.</p>
+        <button class="card-btn">Ver Diagnóstico & Solução &rarr;</button>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" onclick="window.location.href='foco-fracionado.html'">
+        <div class="card-icon">📱</div>
+        <span class="card-tag">Atenção</span>
+        <h2 class="card-title">Foco Fracionado & Interrupções</h2>
+        <p class="card-desc">Notificações constantes, mensagens do trabalho e redes sociais destruindo a concentração.</p>
+        <button class="card-btn">Ver Diagnóstico & Solução &rarr;</button>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" onclick="window.location.href='procrastinacao-conteudos.html'">
+        <div class="card-icon">⏳</div>
+        <span class="card-tag">Hábitos</span>
+        <h2 class="card-title">Procrastinação de Conteúdos Difíceis</h2>
+        <p class="card-desc">Adiar repetidamente aquelas matérias complexas ou relatórios mais exigentes.</p>
+        <button class="card-btn">Ver Diagnóstico & Solução &rarr;</button>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" onclick="window.location.href='acelerador-sem-freio.html'">
+        <div class="card-icon">🧠</div>
+        <span class="card-tag">Saúde Mental</span>
+        <h2 class="card-title">Efeito "Acelerador Sem Freio"</h2>
+        <p class="card-desc">Ansiedade por estar estudando achando que devia trabalhar (ou vice-versa).</p>
+        <button class="card-btn">Ver Diagnóstico & Solução &rarr;</button>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" onclick="window.location.href='desorganizacao-espaco-arquivos.html'">
+        <div class="card-icon">📂</div>
+        <span class="card-tag">Organização</span>
+        <h2 class="card-title">Desorganização do Espaço & Arquivos</h2>
+        <p class="card-desc">Perda de tempo procurando anotações, links e documentos importantes.</p>
+        <button class="card-btn">Ver Diagnóstico & Solução &rarr;</button>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- EFEITOS MODAIS -->
+
+  <!-- Modal 1 -->
+  <div id="modal-1" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-1')">&times;</button>
+      <span class="card-tag">Foco & Energia</span>
+      <h2>Cansaço Pós-Trabalho vs Estudo</h2>
+      <div class="modal-section">
+        <h3>🚨 O Problema e Incômodo Real</h3>
+        <p>Após 8 horas de expediente no trabalho, a carga mental está esgotada. Tentar estudar conteúdos complexos logo em seguida gera frustração, sono e a sensação de que nada está fixando na memória.</p>
+      </div>
+      <div class="modal-section">
+        <h3>💡 Solução Prática</h3>
+        <ul>
+          <li><strong>Transição Rítmica:</strong> Faça uma pausa de 20 a 30 minutos sem telas antes de iniciar os estudos (banho, café, caminhada leve).</li>
+          <li><strong>Técnica Pomodoro Reduzido:</strong> Comece com blocos de 25 minutos com 5 de descanso.</li>
+          <li><strong>Estudo em Micro-doses:</strong> Tente mover 45 minutos do estudo para o início da manhã, antes do trabalho.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal-2" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-2')">&times;</button>
+      <span class="card-tag">Planejamento</span>
+      <h2>Paralisia por Sobrecarga de Tarefas</h2>
+      <div class="modal-section">
+        <h3>🚨 O Problema e Incômodo Real</h3>
+        <p>A lista de afazeres parece infinita: prazos da faculdade/curso se acumulando com demandas e e-mails urgentes do trabalho. O cérebro entra em colapso e acaba optando por não fazer nada.</p>
+      </div>
+      <div class="modal-section">
+        <h3>💡 Solução Prática</h3>
+        <ul>
+          <li><strong>Regra das 3 Prioridades:</strong> Defina apenas 3 tarefas cruciais para o dia (ex: 2 do trabalho, 1 de estudo).</li>
+          <li><strong>Matriz de Prioridade:</strong> Separe o que é Urgente x Importante no início de cada manhã.</li>
+          <li><strong>Esvaziamento Mental:</strong> Anote tudo num papel à noite para tirar a preocupação da mente.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal-3" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-3')">&times;</button>
+      <span class="card-tag">Atenção</span>
+      <h2>Foco Fracionado e Interrupções</h2>
+      <div class="modal-section">
+        <h3>🚨 O Problema e Incômodo Real</h3>
+        <p>Mensagens de WhatsApp, notificações de e-mail corporativo e redes sociais chegam a todo momento. Cada interrupção custa cerca de 20 minutos até que o cérebro recupere a concentração profunda.</p>
+      </div>
+      <div class="modal-section">
+        <h3>💡 Solução Prática</h3>
+        <ul>
+          <li><strong>Modo Foco / Não Perturbe:</strong> Ative em seus dispositivos durante blocos programados de estudo.</li>
+          <li><strong>Agrupamento de Mensagens:</strong> Reserve horários fixos para responder e-mails (ex: 11h e 16h).</li>
+          <li><strong>Barreira Física:</strong> Deixe o celular em outro cômodo enquanto estuda.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="modal-4" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-4')">&times;</button>
+      <span class="card-tag">Hábitos</span>
+      <h2>Procrastinação de Conteúdos Difíceis</h2>
+      <div class="modal-section">
+        <h3>🚨 O Problema e Incômodo Real</h3>
+        <p>Matérias teóricas extensas, projetos de programação ou relatórios pesados são frequentemente adiados em troca de tarefas fáceis e de pouca relevância.</p>
+      </div>
+      <div class="modal-section">
+        <h3>💡 Solução Prática</h3>
+        <ul>
+          <li><strong>Regra dos 5 Minutos:</strong> Comprometa-se a trabalhar na tarefa por apenas 5 minutos. Geralmente a resistência inicial desaparece.</li>
+          <li><strong>Decomposição de Tarefas:</strong> Quebre o "Estudar para a prova" em "Ler 3 páginas do capítulo 2".</li>
+          <li><strong>Engula o Sapo Primeiro:</strong> Realize a tarefa mais difícil no primeiro bloco do seu dia.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div id="modal-5" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-5')">&times;</button>
+      <span class="card-tag">Saúde Mental</span>
+      <h2>Efeito "Acelerador Sem Freio" e Culpabilidade</h2>
+      <div class="modal-section">
+        <h3>🚨 O Problema e Incômodo Real</h3>
+        <p>Sensação constante de culpa: quando está descansando acha que deveria estar estudando; quando está estudando acha que deveria estar produzindo no trabalho. Falta de momentos reais de desconexão.</p>
+      </div>
+      <div class="modal-section">
+        <h3>💡 Solução Prática</h3>
+        <ul>
+          <li><strong>Blocos de Descanso Agendados:</strong> Coloque momentos de lazer no calendário como compromissos inegociáveis.</li>
+          <li><strong>Encerramento de Jornada:</strong> Crie um ritual de encerramento do expediente e dos estudos (fechar o notebook, limpar a mesa).</li>
+          <li><strong>Acompanhamento de Progresso:</strong> Mantenha um histórico visível das tarefas concluídas.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div id="modal-6" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-6')">&times;</button>
+      <span class="card-tag">Organização</span>
+      <h2>Desorganização do Espaço & Arquivos</h2>
+      <div class="modal-section">
+        <h3>🚨 O Problema e Incômodo Real</h3>
+        <p>Anotações espalhadas em papéis, arquivos perdidos no computador e mesa de estudo bagunçada resultam em atrito mental e perda de tempo precioso de estudos.</p>
+      </div>
+      <div class="modal-section">
+        <h3>💡 Solução Prática</h3>
+        <ul>
+          <li><strong>Centralização Digital:</strong> Utilize uma única ferramenta para anotações e resumos (Ex: Notion, Obsidian ou OneNote).</li>
+          <li><strong>Regra da Mesa Limpa:</strong> Mantenha em cima da mesa apenas o material necessário para a tarefa do momento.</li>
+          <li><strong>Estrutura de Pastas Simples:</strong> Organize arquivos por disciplinas/projetos com nomenclatura padronizada.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Gerenciamento de Modais
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if(modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Fechar ao clicar fora do conteúdo
+    window.onclick = function(e) {
+      if (e.target.classList.contains('modal-overlay')) {
+        e.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Animação 3D interativa de partículas e grade espacial no Canvas
+    const canvas = document.getElementById('bg3d');
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    let mouse = { x: width / 2, y: height / 2 };
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    const particles = [];
+    const numParticles = 80;
+
+    for (let i = 0; i < numParticles; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        z: Math.random() * width,
+        size: Math.random() * 2 + 1,
+        color: Math.random() > 0.5 ? '#ff0055' : '#00f0ff'
+      });
+    }
+
+    function render3D() {
+      ctx.fillStyle = '#0a0a0f';
+      ctx.fillRect(0, 0, width, height);
+
+      // Grade 3D ao fundo
+      ctx.strokeStyle = 'rgba(111, 0, 255, 0.08)';
+      ctx.lineWidth = 1;
+      const step = 60;
+      const offsetX = (mouse.x - width / 2) * 0.05;
+      const offsetY = (mouse.y - height / 2) * 0.05;
+
+      for (let x = -step; x < width + step; x += step) {
+        ctx.beginPath();
+        ctx.moveTo(x + offsetX, 0);
+        ctx.lineTo(x - offsetX, height);
+        ctx.stroke();
+      }
+
+      for (let y = -step; y < height + step; y += step) {
+        ctx.beginPath();
+        ctx.moveTo(0, y + offsetY);
+        ctx.lineTo(width, y - offsetY);
+        ctx.stroke();
+      }
+
+      // Render partículas 3D com efeito de profundidade
+      particles.forEach(p => {
+        p.z -= 1.5;
+        if (p.z <= 0) p.z = width;
+
+        const k = 300 / p.z;
+        const px = (p.x - width / 2) * k + width / 2 + (mouse.x - width / 2) * 0.02;
+        const py = (p.y - height / 2) * k + height / 2 + (mouse.y - height / 2) * 0.02;
+        const size = Math.max(0.1, p.size * k);
+
+        ctx.beginPath();
+        ctx.arc(px, py, size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = p.color;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      });
+
+      requestAnimationFrame(render3D);
+    }
+
+    render3D();
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desorganização do Espaço & Arquivos - Organizador de Rotinas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    .page-header { margin-bottom: 30px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: #00f0ff; text-decoration: none; font-weight: 700; margin-bottom: 20px; transition: color 0.3s; }
+    .back-btn:hover { color: #ff0055; }
+    .content-article { background: rgba(18, 18, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .section-title { font-size: 1.5rem; color: #00f0ff; margin: 30px 0 15px 0; border-bottom: 1px solid rgba(0, 240, 255, 0.2); padding-bottom: 8px; }
+    .text-block { color: #c0c0d5; line-height: 1.8; font-size: 1rem; margin-bottom: 20px; }
+    .feature-box { background: rgba(0, 240, 255, 0.08); border-left: 4px solid #00f0ff; padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .feature-box h4 { color: #ffffff; font-size: 1.1rem; margin-bottom: 10px; }
+    .illustration-container { text-align: center; margin: 30px 0; padding: 20px; background: rgba(10, 10, 15, 0.6); border-radius: 12px; border: 1px solid rgba(0, 240, 255, 0.15); }
+    .illustration-svg { max-width: 100%; height: auto; }
+    ul.custom-list { list-style: none; padding-left: 0; }
+    ul.custom-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #c0c0d5; line-height: 1.6; }
+    ul.custom-list li::before { content: '📂'; position: absolute; left: 0; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg3d"></canvas>
+
+  <div class="container">
+    <header class="page-header">
+      <a href="index.html" class="back-btn">&larr; Voltar ao Painel Principal</a>
+      <span class="card-tag">Organização</span>
+      <h1 class="main-title" style="text-align: left;">Desorganização do Espaço & Arquivos</h1>
+      <p class="subtitle" style="text-align: left;">Estruturando ambientes físicos e digitais para atrito zero de inicialização</p>
+    </header>
+
+    <main class="content-article">
+      <h2 class="section-title">1. O Impacto da Fricção Operacional no Foco</h2>
+      <p class="text-block">
+        Gastar 10 ou 15 minutos procurando uma anotação antiga, um PDF de aula ou um arquivo de trabalho consome energia decisória valiosa e eleva o nível de estresse antes mesmo do estudo começar. Um ambiente caótico (físico ou na área de trabalho do computador) atua como ruído visual constante para o cérebro.
+      </p>
+
+      <div class="illustration-container">
+        <!-- SVG Ilustrativo: Arquitetura PARA de Organização -->
+        <svg class="illustration-svg" width="400" height="130" viewBox="0 0 400 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="30" width="80" height="60" rx="6" fill="rgba(255,0,85,0.15)" stroke="#ff0055" stroke-width="2"/>
+          <text x="55" y="65" fill="#ff0055" font-size="11" font-weight="bold" text-anchor="middle" font-family="Montserrat">PROJETOS</text>
+
+          <rect x="110" y="30" width="80" height="60" rx="6" fill="rgba(0,240,255,0.15)" stroke="#00f0ff" stroke-width="2"/>
+          <text x="150" y="65" fill="#00f0ff" font-size="11" font-weight="bold" text-anchor="middle" font-family="Montserrat">ÁREAS</text>
+
+          <rect x="205" y="30" width="80" height="60" rx="6" fill="rgba(111,0,255,0.15)" stroke="#6f00ff" stroke-width="2"/>
+          <text x="245" y="65" fill="#6f00ff" font-size="11" font-weight="bold" text-anchor="middle" font-family="Montserrat">RECURSOS</text>
+
+          <rect x="300" y="30" width="80" height="60" rx="6" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="2"/>
+          <text x="340" y="65" fill="#aaa" font-size="11" font-weight="bold" text-anchor="middle" font-family="Montserrat">ARQUIVOS</text>
+        </svg>
+      </div>
+
+      <h2 class="section-title">2. Métodos de Padronização e Gestão de Conhecimento</h2>
+
+      <div class="feature-box">
+        <h4>A Regra da Mesa Limpa (Meso em Place de Estudo)</h4>
+        <p class="text-block" style="margin-bottom:0;">
+          Antes de iniciar qualquer bloco produtivo, deixe sobre a mesa estritamente o material necessário para a tarefa presente (ex: apenas o notebook e a garrafa de água). Remova todos os cadernos de outras disciplinas, papéis avulsos e itens desnecessários.
+        </p>
+      </div>
+
+      <ul class="custom-list">
+        <li><strong>Metodologia P.A.R.A (Projetos, Áreas, Recursos, Arquivos):</strong> Organize seus arquivos digitais e pastas em 4 categorias claras:
+          <br>1. <em>Projetos:</em> Tarefas com prazo de entrega curto.
+          <br>2. <em>Áreas:</em> Responsabilidades contínuas (ex: Saúde, Trabalho, Faculdade).
+          <br>3. <em>Recursos:</em> Materiais de consulta sobre temas de interesse.
+          <br>4. <em>Arquivos:</em> Itens inativos guardados para histórico.
+        </li>
+        <li><strong>Centralização em Segunda Mente (Second Brain):</strong> Adote apenas uma ferramenta principal de notas (Ex: Notion, Obsidian ou OneNote). Evite anotar ideias espalhadas em múltiplos blocos de notas de celular ou papéis soltos.</li>
+        <li><strong>Nomenclatura Padrão de Arquivos:</strong> Padronize a gravação de arquivos com datas invertidas e nomes claros (Exemplo: <code>2026-09-29_Relatorio_Trabalho_V1.pdf</code>). Isso simplifica a busca instantânea.</li>
+      </ul>
+    </main>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('bg3d');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resize); resize();
+    let mouse = { x: width / 2, y: height / 2 };
+    window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({ x: Math.random() * width, y: Math.random() * height, z: Math.random() * width, size: Math.random() * 2 + 1, color: Math.random() > 0.5 ? '#ff0055' : '#00f0ff' });
+    }
+    function render3D() {
+      ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = 'rgba(111, 0, 255, 0.08)'; ctx.lineWidth = 1;
+      const step = 60, offsetX = (mouse.x - width / 2) * 0.05, offsetY = (mouse.y - height / 2) * 0.05;
+      for (let x = -step; x < width + step; x += step) { ctx.beginPath(); ctx.moveTo(x + offsetX, 0); ctx.lineTo(x - offsetX, height); ctx.stroke(); }
+      for (let y = -step; y < height + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y + offsetY); ctx.lineTo(width, y - offsetY); ctx.stroke(); }
+      particles.forEach(p => {
+        p.z -= 1.5; if (p.z <= 0) p.z = width;
+        const k = 300 / p.z;
+        const px = (p.x - width / 2) * k + width / 2 + (mouse.x - width / 2) * 0.02;
+        const py = (p.y - height / 2) * k + height / 2 + (mouse.y - height / 2) * 0.02;
+        ctx.beginPath(); ctx.arc(px, py, Math.max(0.1, p.size * k), 0, Math.PI * 2);
+        ctx.fillStyle = p.color; ctx.shadowBlur = 10; ctx.shadowColor = p.color; ctx.fill(); ctx.shadowBlur = 0;
+      });
+      requestAnimationFrame(render3D);
+    }
+    render3D();
+  </script>
+</body>
+</html>
